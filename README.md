@@ -6,9 +6,9 @@ This repository is a final project for *Assembly Language and System Programming
 
 <br>
 
-## Dependencies 
+## Dependency 
 
-The repo requires following packages
+The repo requires following package
 
 - masm32
 
@@ -19,7 +19,7 @@ The repo requires following packages
 There are three buttons on the main window.
 
 - `Exit to Earth` : exit and back to command line.
-- `Fly to Mars` : play .wav files automatically (just like Like list on YouTube), you can press the Stop button and back to the main window.
+- `Fly to Mars` : play .wav files automatically (just like Favorite list on YouTube), you can press the Stop button and back to the main window.
 - `Fly to Jupiter` : play the .mp3 files in your own directory.
 
 <br>
