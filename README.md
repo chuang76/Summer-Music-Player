@@ -8,7 +8,7 @@ This repository is a final project for *Assembly Language and System Programming
 
 ## Dependency 
 
-The repo requires following package
+If you want to modify the codes, the repo requires following package
 
 - masm32
 
@@ -42,7 +42,7 @@ link the .obj files with
 $ link /SUBSYSTEM:WINDOWS /LIBPATH:C:\masm32\lib final.obj rsrc.res
 ```
 
-and you can execute the application
+or you can just execute the application
 
 ```
 $ final.exe
