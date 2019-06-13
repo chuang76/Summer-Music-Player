@@ -32,25 +32,25 @@ endm
 	ButtonMarsID    equ  		2
 	ButtonJupID     equ  		3
 
-	ID_LIST1 		equ  		101					; button for dialog box 
-	ID_BUTTON1 		equ  		201
-   	ID_BUTTON2 		equ  		202
-	ID_BUTTON3 		equ  		203
+	ID_LIST1 	equ  		101					; button for dialog box 
+	ID_BUTTON1 	equ  		201
+   	ID_BUTTON2 	equ  		202
+	ID_BUTTON3 	equ  		203
 	ID_SHOWPATH 	equ  		1000
 
 .data?
-	hInstance 		HINSTANCE 			?
-	CommandLine 	LPSTR 				?
+	hInstance 	HINSTANCE 		?
+	CommandLine 	LPSTR 			?
 	hEarthButton   	HWND        		?			; handle of button 
 	hMarsButton     HWND        		?
 	hJupButton      HWND        		? 
-	icex 			INITCOMMONCONTROLSEX 	<>
+	icex 		INITCOMMONCONTROLSEX 	<>
 
 .data 
-	ClassName 			db 		"test", 0
-	AppName 			db 		"Summer Music Player", 0
+	ClassName 		db 		"test", 0
+	AppName 		db 		"Summer Music Player", 0
 	ButtonClassName 	db 		"button", 0
-	dlgname 			db 		"MAINSCREEN", 0
+	dlgname 		db 		"MAINSCREEN", 0
 
 	BorderText     		db  	"==============================================", 0
 	ProjectText     	db  	"< Summer Music Player >", 0
@@ -62,22 +62,22 @@ endm
 	Earth_title     	db 		"Exit to Earth", 0
 	Earth_text      	db  	"Are you sure to leave ? ", 0
 	
-	Mars_title 			db  	"Welcome to Mars :)", 0
+	Mars_title 		db  	"Welcome to Mars :)", 0
 	Mars_text    		db  	"We hope you enjoyed journey through sound...", 0
-	Stop_text 			db 		"Want to stop ? ", 0
+	Stop_text 		db 		"Want to stop ? ", 0
 		
 	Start_song      	db  	"start.wav", 0
 	First_song      	db  	"nujabes.wav", 0
 		
-	msg1    			db  	"Exit to Earth", 0			; msg on button 
-	msg2    			db  	"Fly to Mars", 0
-   	msg3    			db  	"Fly to Jupiter", 0
+	msg1    		db  	"Exit to Earth", 0			; msg on button 
+	msg2    		db  	"Fly to Mars", 0
+   	msg3    		db  	"Fly to Jupiter", 0
 
 	Mp3DeviceID 		dd 		0
-	PlayFlag 			dd 		0 
-	Mp3Files 			db 		"*.mp3", 125 dup (0)
-	Mp3Device 			db 		"MPEGVideo", 0
-	FileName 			db 		128 dup (0)
+	PlayFlag 		dd 		0 
+	Mp3Files 		db 		"*.mp3", 125 dup (0)
+	Mp3Device 		db 		"MPEGVideo", 0
+	FileName 		db 		128 dup (0)
     
 .code 
 start: 
@@ -247,7 +247,7 @@ Multimedia proc hWin:dword, uMsg:dword, aParam:dword, bParam:dword
 		invoke SendDlgItemMessage, hWin, ID_LIST1, LB_SETCURSEL, 0, 0 	
 
 		invoke SendDlgItemMessage, hWin, ID_LIST1, LB_GETTEXT, eax, addr FileName     ; get string from the list box 
-		invoke SetFocus, hWin    	; 	set the keyboard focus on the specified window 
+		invoke SetFocus, hWin    	; set the keyboard focus on the specified window 
 
 	.elseif uMsg == WM_COMMAND
 		mov eax, aParam 
