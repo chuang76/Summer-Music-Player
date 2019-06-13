@@ -18,17 +18,22 @@ STYLE DS_MODALFRAME | DS_CENTER | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE |
 CAPTION "Welcome to Jupiter :)"
 FONT 8, "MS Sans Serif"
 BEGIN
-    LISTBOX         ID_LIST1,8,28,240,100,LBS_SORT | LBS_MULTICOLUMN | 
+    LISTBOX         ID_LIST1, 8, 28, 240, 100, LBS_SORT | LBS_MULTICOLUMN | 
                     WS_HSCROLL
-    PUSHBUTTON      "Play",ID_BUTTON1,128,152,36,20,BS_FLAT,
+
+    PUSHBUTTON      "Play", ID_BUTTON1, 128, 152, 36, 20, BS_FLAT,
                     WS_EX_DLGMODALFRAME
-    PUSHBUTTON      "Stop",ID_BUTTON2,172,152,36,20,BS_FLAT,
+
+    PUSHBUTTON      "Stop", ID_BUTTON2, 172, 152, 36, 20, BS_FLAT,
                     WS_EX_DLGMODALFRAME
-    DEFPUSHBUTTON   "Close",ID_BUTTON3,216,152,36,20,BS_FLAT,
+
+    DEFPUSHBUTTON   "Close", ID_BUTTON3, 216, 152, 36, 20, BS_FLAT,
                     WS_EX_DLGMODALFRAME
-    LTEXT           "",ID_SHOWPATH,8,12,240,10,SS_SUNKEN
+
+    LTEXT           "", ID_SHOWPATH, 8, 12, 240, 10, SS_SUNKEN
+
     CTEXT           "Click on the mp3 file and start your journey !",
-                    -1,12,132,177,15,SS_CENTERIMAGE | WS_BORDER
+                    -1, 12, 132, 177, 15, SS_CENTERIMAGE | WS_BORDER
 END
 
 ; #######################################################################
