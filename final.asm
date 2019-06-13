@@ -13,6 +13,7 @@ include C:\masm32\include\kernel32.inc
 include C:\masm32\include\comctl32.inc
 include C:\masm32\include\gdi32.inc
 include C:\masm32\include\winmm.inc
+
 includelib C:\masm32\lib\user32.lib
 includelib C:\masm32\lib\kernel32.lib
 includelib C:\masm32\lib\comctl32.lib
@@ -47,10 +48,10 @@ endm
 	icex 		INITCOMMONCONTROLSEX 	<>
 
 .data 
-	ClassName 		db 		"test", 0
-	AppName 		db 		"Summer Music Player", 0
-	ButtonClassName 	db 		"button", 0
-	dlgname 		db 		"MAINSCREEN", 0
+	ClassName 		db 	"test", 0
+	AppName 		db 	"Summer Music Player", 0
+	ButtonClassName 	db 	"button", 0
+	dlgname 		db 	"MAINSCREEN", 0
 
 	BorderText     		db  	"==============================================", 0
 	ProjectText     	db  	"< Summer Music Player >", 0
@@ -59,12 +60,12 @@ endm
 	WelcomeText3    	db  	"Which planet will you visit ?", 0
    	VersionText     	db  	"Version: v1.2      Date: June 12, 2019", 0
 
-	Earth_title     	db 		"Exit to Earth", 0
+	Earth_title     	db 	"Exit to Earth", 0
 	Earth_text      	db  	"Are you sure to leave ? ", 0
 	
 	Mars_title 		db  	"Welcome to Mars :)", 0
 	Mars_text    		db  	"We hope you enjoyed journey through sound...", 0
-	Stop_text 		db 		"Want to stop ? ", 0
+	Stop_text 		db 	"Want to stop ? ", 0
 		
 	Start_song      	db  	"start.wav", 0
 	First_song      	db  	"nujabes.wav", 0
@@ -73,11 +74,11 @@ endm
 	msg2    		db  	"Fly to Mars", 0
    	msg3    		db  	"Fly to Jupiter", 0
 
-	Mp3DeviceID 		dd 		0
-	PlayFlag 		dd 		0 
-	Mp3Files 		db 		"*.mp3", 125 dup (0)
-	Mp3Device 		db 		"MPEGVideo", 0
-	FileName 		db 		128 dup (0)
+	Mp3DeviceID 		dd 	0
+	PlayFlag 		dd 	0 
+	Mp3Files 		db 	"*.mp3", 125 dup (0)
+	Mp3Device 		db 	"MPEGVideo", 0
+	FileName 		db 	128 dup (0)
     
 .code 
 start: 
@@ -96,7 +97,7 @@ WinMain proc hInst:HINSTANCE, hPrevInst:HINSTANCE, CmdLine:LPSTR, CmdShow:dword
 
 	local wc:WNDCLASSEX 
 	local msg:MSG 
-	local hwnd:HWND 								; handle 
+	local hwnd:HWND 						; handle 
 
 	mov wc.cbSize, sizeof WNDCLASSEX 				
 	mov wc.style, CS_HREDRAW or CS_VREDRAW 
@@ -118,7 +119,7 @@ WinMain proc hInst:HINSTANCE, hPrevInst:HINSTANCE, CmdLine:LPSTR, CmdShow:dword
 	invoke LoadCursor, NULL, IDC_ARROW 					
 	mov wc.hCursor, eax 
 
-	invoke RegisterClassEx, addr wc 					; register 
+	invoke RegisterClassEx, addr wc 				; register 
 
 	invoke CreateWindowEx, WS_EX_CLIENTEDGE, addr ClassName, \
 		addr AppName, WS_VISIBLE or WS_OVERLAPPED or WS_SYSMENU, \
