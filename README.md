@@ -2,7 +2,7 @@
 
 This repository is a final project for *Assembly Language and System Programming* in NCHU. <br>The program is under masm 32-bit mode. 
 
-![](https://raw.githubusercontent.com/chuang76/image/master/asm2.PNG)
+![](https://raw.githubusercontent.com/chuang76/image/master/asm3.PNG)
 
 <br>
 
@@ -24,7 +24,7 @@ There are three buttons on the main window.
 
 <br>
 
-If you want to modify the codes, you can assemble the .asm file with 
+If you want to modify the codes, you can assemble .asm file with 
 
 ```
 $ ml /c /coff /Cp final.asm
