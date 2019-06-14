@@ -1,16 +1,12 @@
 #include "C:\masm32\include\resource.h"
 
-;################################################################################
-
 #define  ID_LIST1 101
-
 #define  ID_BUTTON1 201
 #define  ID_BUTTON2 202
 #define  ID_BUTTON3 203
-
 #define  ID_SHOWPATH 1000
 
-; #######################################################################
+; ===================================================================================
 
 MAINSCREEN DIALOGEX 29, 28, 256, 180
 STYLE DS_MODALFRAME | DS_CENTER | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | 
@@ -35,6 +31,3 @@ BEGIN
     CTEXT           "Click on the mp3 file and start your journey !",
                     -1, 12, 132, 177, 15, SS_CENTERIMAGE | WS_BORDER
 END
-
-; #######################################################################
-
