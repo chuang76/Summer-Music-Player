@@ -1,4 +1,4 @@
-# Summer-Music-Player
+# Music Player with MASM
 
 This repository is a final project for Assembly Language and System Programming course. <br>The program is under masm 32-bit mode. 
 
