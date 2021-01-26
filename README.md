@@ -1,6 +1,6 @@
 # Summer-Music-Player
 
-This repository is a final project for *Assembly Language and System Programming* in NCHU. <br>The program is under masm 32-bit mode. 
+This repository is a final project for Assembly Language and System Programming course. <br>The program is under masm 32-bit mode. 
 
 ![](https://raw.githubusercontent.com/chuang76/image/master/asm3.PNG)
 
@@ -42,10 +42,8 @@ link the .obj files with
 $ link /SUBSYSTEM:WINDOWS /LIBPATH:C:\masm32\lib final.obj rsrc.res
 ```
 
-or you can just execute the application
+or you can just run the executable
 
 ```
 $ final.exe
 ```
-
-Hope you enjoy journey through the music ! 
